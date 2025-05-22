@@ -62,6 +62,7 @@ flutter:
   assets:
     - assets/images/yumquick-logo.png
     - assets/images/yumquick-logo2.png
+    - assets/fonts/LeagueSpartan.ttf
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
