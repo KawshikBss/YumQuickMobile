@@ -9,7 +9,7 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     onLogin() {
-      context.go('/on-boarding');
+      context.go('/login');
     }
 
     onSignup() {
