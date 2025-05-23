@@ -11,12 +11,34 @@ class WelcomeScreen extends StatelessWidget {
       backgroundColor: AppColors.orangeBase,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset('assets/images/yumquick-logo2.png'),
-            LaunchButton(label: 'Log In'),
-            LaunchButton(label: 'Sign Up'),
+            const SizedBox(height: 30),
+            SizedBox(
+              width: 295,
+              child: Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+                style: TextStyle(
+                  color: AppColors.textLight,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const SizedBox(height: 42),
+            LaunchButton(
+              label: 'Log In',
+              backGroundColor: AppColors.yellowBase,
+            ),
+            const SizedBox(height: 6),
+            LaunchButton(
+              label: 'Sign Up',
+              backGroundColor: AppColors.yellowSecondary,
+            ),
+            const SizedBox(height: 120,),
           ],
         ),
       ),
