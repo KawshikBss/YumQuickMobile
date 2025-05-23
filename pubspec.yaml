@@ -62,6 +62,9 @@ flutter:
   assets:
     - assets/images/yumquick-logo.png
     - assets/images/yumquick-logo2.png
+    - assets/images/onboarding/on-boarding1.png
+    - assets/images/onboarding/on-boarding2.png
+    - assets/images/onboarding/on-boarding3.png
     # - assets/fonts/LeagueSpartan.ttf
   #   - images/a_dot_ham.jpeg
 
@@ -79,23 +82,43 @@ flutter:
   fonts:
     - family: LeagueSpartan
       fonts:
-        - asset: assets/fonts/LeagueSpartan-Black.ttf
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-Black.ttf
           weight: 900
-        - asset: assets/fonts/LeagueSpartan-ExtraBold.ttf
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-ExtraBold.ttf
           weight: 800
-        - asset: assets/fonts/LeagueSpartan-Bold.ttf
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-Bold.ttf
           weight: 700
-        - asset: assets/fonts/LeagueSpartan-Medium.ttf
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-Medium.ttf
           weight: 500
-        - asset: assets/fonts/LeagueSpartan-SemiBold.ttf
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-SemiBold.ttf
           weight: 600
-        - asset: assets/fonts/LeagueSpartan-Regular.ttf
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-Regular.ttf
           weight: 400
-        - asset: assets/fonts/LeagueSpartan-Light.ttf
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-Light.ttf
           weight: 300
-        - asset: assets/fonts/LeagueSpartan-ExtraLight.ttf
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-ExtraLight.ttf
           weight: 200
-        - asset: assets/fonts/LeagueSpartan-Thin.ttf
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-Thin.ttf
+          weight: 100
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter/Inter_18pt-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Inter/Inter_18pt-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Inter/Inter_18pt-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter/Inter_18pt-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter/Inter_18pt-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter/Inter_18pt-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter/Inter_18pt-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Inter/Inter_18pt-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Inter/Inter_18pt-Thin.ttf
           weight: 100
   #   - family: Trajan Pro
   #     fonts:
