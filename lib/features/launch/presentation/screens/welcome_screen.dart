@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
     }
 
     onSignup() {
-      context.go('/on-boarding');
+      context.go('/signup');
     }
 
     return Scaffold(
