@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yumquick/shared/theme/app_colors.dart';
 
 class LaunchButton extends StatelessWidget {
   final String label;
@@ -16,9 +17,19 @@ class LaunchButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ButtonStyle(
+        fixedSize: WidgetStatePropertyAll(Size.fromWidth(210)),
         backgroundColor: WidgetStatePropertyAll(backGroundColor),
+        padding: WidgetStatePropertyAll(EdgeInsets.only(top: 14, bottom: 8)),
       ),
-      child: Text(label),
+      child: Text(
+        label,
+        style: TextStyle(
+          fontFamily: 'LeagueSpartan',
+          color: AppColors.orangeBase,
+          fontSize: 24,
+          fontWeight: FontWeight.w500,
+        ),
+      ),
     );
   }
 }
