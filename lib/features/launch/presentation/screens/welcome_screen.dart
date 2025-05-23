@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yumquick/features/launch/presentation/widgets/launch_button.dart';
 import 'package:yumquick/shared/theme/app_colors.dart';
 
@@ -7,6 +8,14 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    onLogin() {
+      context.go('/on-boarding');
+    }
+
+    onSignup() {
+      context.go('/on-boarding');
+    }
+
     return Scaffold(
       backgroundColor: AppColors.orangeBase,
       body: Center(
@@ -31,14 +40,16 @@ class WelcomeScreen extends StatelessWidget {
             const SizedBox(height: 42),
             LaunchButton(
               label: 'Log In',
+              onPressed: onLogin,
               backGroundColor: AppColors.yellowBase,
             ),
             const SizedBox(height: 6),
             LaunchButton(
               label: 'Sign Up',
+              onPressed: onSignup,
               backGroundColor: AppColors.yellowSecondary,
             ),
-            const SizedBox(height: 120,),
+            const SizedBox(height: 120),
           ],
         ),
       ),
