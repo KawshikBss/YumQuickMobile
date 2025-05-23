@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yumquick/features/on_boarding/models/on_boarding_item.dart';
 import 'package:yumquick/shared/theme/app_colors.dart';
 
@@ -51,6 +52,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         duration: Duration(milliseconds: 500),
         curve: Curves.easeIn,
       );
+    } else {
+      context.go('/welcome');
     }
   }
 
