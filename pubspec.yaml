@@ -68,6 +68,7 @@ flutter:
     - assets/images/icons/Gmail.png
     - assets/images/icons/Facebook.png
     - assets/images/icons/Mark.png
+    - assets/images/Mark-large.png
     # - assets/fonts/LeagueSpartan.ttf
   #   - images/a_dot_ham.jpeg
 
