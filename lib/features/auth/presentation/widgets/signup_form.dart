@@ -23,6 +23,12 @@ class _SignupFormState extends State<SignupForm> {
         AuthInput(label: 'Email', hintText: 'example@example.com'),
         const SizedBox(height: 22),
         AuthInput(label: 'Phone Number', hintText: '+ 123 456 789'),
+        const SizedBox(height: 22),
+        AuthInput(
+          label: 'Date of birth',
+          hintText: 'DD / MM /YYY',
+          dateType: true,
+        ),
         const SizedBox(height: 20),
         RichText(
           textAlign: TextAlign.center,
