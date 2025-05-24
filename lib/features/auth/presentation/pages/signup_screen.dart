@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yumquick/features/auth/presentation/widgets/auth_layout.dart';
 import 'package:yumquick/features/auth/presentation/widgets/signup_alternatives.dart';
 import 'package:yumquick/features/auth/presentation/widgets/signup_form.dart';
@@ -18,7 +19,11 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   void initState() {
     super.initState();
-    _loginRecognizer = TapGestureRecognizer()..onTap = () {};
+    _loginRecognizer =
+        TapGestureRecognizer()
+          ..onTap = () {
+            context.go('/login');
+          };
   }
 
   @override
