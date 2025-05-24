@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yumquick/features/auth/presentation/widgets/auth_input.dart';
 import 'package:yumquick/features/auth/presentation/widgets/submit_button.dart';
 import 'package:yumquick/shared/constants/app_fonts.dart';
@@ -12,6 +13,10 @@ class SignupForm extends StatefulWidget {
 }
 
 class _SignupFormState extends State<SignupForm> {
+  _onSignUp() {
+    context.go('/set-password');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -64,7 +69,7 @@ class _SignupFormState extends State<SignupForm> {
           ),
         ),
         const SizedBox(height: 10),
-        SubmitButton(label: 'Sign Up'),
+        SubmitButton(label: 'Sign Up', onPressed: _onSignUp),
       ],
     );
   }
