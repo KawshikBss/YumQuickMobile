@@ -1,5 +1,6 @@
 import 'package:yumquick/core/routes/app_route.dart';
 import 'package:yumquick/features/auth/presentation/pages/login_screen.dart';
+import 'package:yumquick/features/auth/presentation/pages/set_fingerprint_screen.dart';
 import 'package:yumquick/features/auth/presentation/pages/set_password_screen.dart';
 import 'package:yumquick/features/auth/presentation/pages/signup_screen.dart';
 import 'package:yumquick/features/launch/presentation/screens/launch_screen.dart';
@@ -21,6 +22,11 @@ class AppRoutes {
       name: 'Set Password',
       path: '/set-password',
       page: SetPasswordScreen(),
+    ),
+    AppRoute(
+      name: 'Set Fingerprint',
+      path: '/set-fingerprint',
+      page: SetFingerprintScreen(),
     ),
   ];
 }
