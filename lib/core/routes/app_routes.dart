@@ -1,8 +1,8 @@
 import 'package:yumquick/core/routes/app_route.dart';
-import 'package:yumquick/features/auth/presentation/pages/login_screen.dart';
-import 'package:yumquick/features/auth/presentation/pages/set_fingerprint_screen.dart';
-import 'package:yumquick/features/auth/presentation/pages/set_password_screen.dart';
-import 'package:yumquick/features/auth/presentation/pages/signup_screen.dart';
+import 'package:yumquick/features/auth/presentation/screens/login_screen.dart';
+import 'package:yumquick/features/auth/presentation/screens/set_fingerprint_screen.dart';
+import 'package:yumquick/features/auth/presentation/screens/set_password_screen.dart';
+import 'package:yumquick/features/auth/presentation/screens/signup_screen.dart';
 import 'package:yumquick/features/launch/presentation/screens/launch_screen.dart';
 import 'package:yumquick/features/launch/presentation/screens/welcome_screen.dart';
 import 'package:yumquick/features/on_boarding/presentation/screens/on_boarding_screen.dart';
