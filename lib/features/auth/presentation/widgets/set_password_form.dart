@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yumquick/features/auth/presentation/widgets/auth_input.dart';
 import 'package:yumquick/shared/theme/app_colors.dart';
 
@@ -10,6 +11,10 @@ class SetPasswordForm extends StatefulWidget {
 }
 
 class _SetPasswordFormState extends State<SetPasswordForm> {
+  _onSubmitPassword() {
+    context.go('/set-fingerprint');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,9 +28,8 @@ class _SetPasswordFormState extends State<SetPasswordForm> {
         ),
         const SizedBox(height: 56),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: _onSubmitPassword,
           style: ButtonStyle(
-            // fixedSize: WidgetStatePropertyAll(Size.fromWidth(210)),
             backgroundColor: WidgetStatePropertyAll(AppColors.orangeBase),
             padding: WidgetStatePropertyAll(
               EdgeInsets.symmetric(horizontal: 22, vertical: 8),
