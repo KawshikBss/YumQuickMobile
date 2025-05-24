@@ -33,7 +33,7 @@ class AuthLayout extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 60),
-            Flexible(
+            Expanded(
               child: Container(
                 width: double.infinity,
                 padding: const EdgeInsets.only(top: 34, right: 36, left: 36),
