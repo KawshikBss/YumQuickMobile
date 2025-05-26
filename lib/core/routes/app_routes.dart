@@ -43,10 +43,35 @@ class AppRoutes {
   ];
 
   static final List<AppRoute> mainShellRoutes = [
-    AppRoute(name: 'Home', path: '/home', page: HomeScreen()),
-    AppRoute(name: 'All Foods', path: '/foods/all', page: AllFoodsScreen()),
-    AppRoute(name: 'Favourites', path: '/favourites', page: FavoritesScreen()),
-    AppRoute(name: 'Orders', path: '/orders/all', page: OrdersScreen()),
-    AppRoute(name: 'Help', path: '/help', page: HelpScreen()),
+    AppRoute(
+      name: 'Home',
+      path: '/home',
+      iconImage: 'assets/images/icons/home-icon.png',
+      page: HomeScreen(),
+    ),
+    AppRoute(
+      name: 'All Foods',
+      path: '/foods/all',
+      iconImage: 'assets/images/icons/all-foods-icon.png',
+      page: AllFoodsScreen(),
+    ),
+    AppRoute(
+      name: 'Favourites',
+      path: '/favourites',
+      iconImage: 'assets/images/icons/favorites-icon.png',
+      page: FavoritesScreen(),
+    ),
+    AppRoute(
+      name: 'Orders',
+      path: '/orders/all',
+      iconImage: 'assets/images/icons/order-icon.png',
+      page: OrdersScreen(),
+    ),
+    AppRoute(
+      name: 'Help',
+      path: '/help',
+      iconImage: 'assets/images/icons/help-icon.png',
+      page: HelpScreen(),
+    ),
   ];
 }
