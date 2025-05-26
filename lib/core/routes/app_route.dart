@@ -7,6 +7,7 @@ class AppRoute {
   final Widget? page;
   final Widget Function(BuildContext, GoRouterState, Widget)? pageBuilder;
   final IconData? icon;
+  final String? iconImage;
   final bool requiresAuth;
   final List<AppRoute> shellChildren;
 
@@ -16,6 +17,7 @@ class AppRoute {
     this.page,
     this.pageBuilder,
     this.icon,
+    this.iconImage,
     this.requiresAuth = false,
     this.shellChildren = const [],
   });
