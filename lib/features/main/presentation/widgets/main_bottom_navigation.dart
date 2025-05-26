@@ -19,9 +19,10 @@ class MainBottomNavigation extends StatelessWidget {
       borderRadius: const BorderRadius.vertical(top: Radius.circular(30)),
       child: BottomAppBar(
         color: AppColors.orangeBase,
-        padding: EdgeInsets.zero, // removes all default padding
+        padding: EdgeInsets.zero,
         child: BottomNavigationBar(
           currentIndex: currentIndex,
+          onTap: onTap,
           items:
               items
                   .map(
