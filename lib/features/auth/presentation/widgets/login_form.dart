@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:yumquick/features/auth/presentation/widgets/auth_input.dart';
 import 'package:yumquick/features/auth/presentation/widgets/submit_button.dart';
 import 'package:yumquick/shared/constants/app_fonts.dart';
@@ -12,6 +13,10 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
+  _onSubmit() {
+    context.go('/home');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -39,7 +44,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
         ),
         const SizedBox(height: 40),
-        SubmitButton(label: 'Log In'),
+        SubmitButton(label: 'Log In', onPressed: _onSubmit),
       ],
     );
   }
