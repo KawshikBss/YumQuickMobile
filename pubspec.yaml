@@ -85,6 +85,14 @@ flutter:
     - assets/images/categories/Desserts.png
     - assets/images/categories/Drinks.png
     - assets/images/icons/star-icon.png
+    - assets/images/icons/sidebar/bag.png
+    - assets/images/icons/sidebar/user.png
+    - assets/images/icons/sidebar/location.png
+    - assets/images/icons/sidebar/card.png
+    - assets/images/icons/sidebar/contact.png
+    - assets/images/icons/sidebar/faq.png
+    - assets/images/icons/sidebar/setting.png
+    - assets/images/icons/sidebar/logout.png
     # - assets/fonts/LeagueSpartan.ttf
   #   - images/a_dot_ham.jpeg
 
