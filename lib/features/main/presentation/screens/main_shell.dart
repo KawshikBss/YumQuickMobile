@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:yumquick/core/routes/app_routes.dart';
 import 'package:yumquick/features/main/presentation/widgets/main_bottom_navigation.dart';
+import 'package:yumquick/shared/theme/app_colors.dart';
 
 class MainShell extends StatelessWidget {
   final Widget child;
@@ -19,6 +20,7 @@ class MainShell extends StatelessWidget {
     }
 
     return Scaffold(
+      backgroundColor: AppColors.bgLight,
       body: child,
       bottomNavigationBar: MainBottomNavigation(
         onTap: onChangeLocation,
