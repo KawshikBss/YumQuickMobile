@@ -18,34 +18,36 @@ class _OffersSectionState extends State<OffersSection> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 20),
-      child: Column(
-        children: [
-          CarouselSlider(
-            items:
-                OfferItem.items
-                    .map(
-                      (offerItem) => OfferSliderItem(
-                        reverse: OfferItem.items.indexOf(offerItem) % 2 != 0,
-                        offerItem: offerItem,
-                      ),
-                    )
-                    .toList(),
-            carouselController: _carouselController,
-            options: CarouselOptions(
-              viewportFraction: 1,
-              height: 152,
-              onPageChanged: (index, reason) {
-                setState(() {
-                  _currentIndex = index;
-                });
-              },
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 36),
+        child: Column(
+          children: [
+            CarouselSlider(
+              items:
+                  OfferItem.items
+                      .map(
+                        (offerItem) => OfferSliderItem(
+                          reverse: OfferItem.items.indexOf(offerItem) % 2 != 0,
+                          offerItem: offerItem,
+                        ),
+                      )
+                      .toList(),
+              carouselController: _carouselController,
+              options: CarouselOptions(
+                viewportFraction: 1,
+                height: 152,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _currentIndex = index;
+                  });
+                },
+              ),
             ),
-          ),
-          const SizedBox(height: 5),
-          _carouselDots(),
-        ],
+            const SizedBox(height: 5),
+            _carouselDots(),
+          ],
+        ),
       ),
     );
   }
