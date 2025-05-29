@@ -17,7 +17,7 @@ class HomeHeader extends StatelessWidget {
             (context, animation, secondaryAnimation) => ProfileSidebar(),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
           final offsetAnimation = Tween<Offset>(
-            begin: const Offset(1, 0), // Start off-screen right
+            begin: const Offset(1, 0),
             end: Offset.zero,
           ).animate(
             CurvedAnimation(parent: animation, curve: Curves.easeOutCubic),
