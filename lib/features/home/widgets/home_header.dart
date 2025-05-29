@@ -10,8 +10,7 @@ class HomeHeader extends StatelessWidget {
       backgroundColor: AppColors.yellowBase,
       expandedHeight: MediaQuery.of(context).size.height * 0.2,
       flexibleSpace: FlexibleSpaceBar(
-        background: Container(
-          height: MediaQuery.of(context).size.height * 0.2,
+        background: Padding(
           padding: const EdgeInsets.only(
             top: 62,
             right: 30,
