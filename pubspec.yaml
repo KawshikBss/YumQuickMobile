@@ -78,6 +78,11 @@ flutter:
     - assets/images/icons/cart-icon.png
     - assets/images/icons/bell-icon.png
     - assets/images/icons/user-icon.png
+    - assets/images/categories/Snacks.png
+    - assets/images/categories/Meals.png
+    - assets/images/categories/Vegan.png
+    - assets/images/categories/Desserts.png
+    - assets/images/categories/Drinks.png
     # - assets/fonts/LeagueSpartan.ttf
   #   - images/a_dot_ham.jpeg
 
