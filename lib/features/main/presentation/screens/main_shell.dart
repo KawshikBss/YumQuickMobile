@@ -19,7 +19,7 @@ class MainShell extends StatelessWidget {
     }
 
     return Scaffold(
-      body: SafeArea(bottom: false, child: child),
+      body: child,
       bottomNavigationBar: MainBottomNavigation(
         onTap: onChangeLocation,
         currentIndex: currentIndex,
