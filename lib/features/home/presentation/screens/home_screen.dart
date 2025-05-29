@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yumquick/features/home/widgets/home_content.dart';
-import 'package:yumquick/features/home/widgets/home_header.dart';
+import 'package:yumquick/features/home/presentation/widgets/home_content.dart';
+import 'package:yumquick/features/home/presentation/widgets/home_header.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
