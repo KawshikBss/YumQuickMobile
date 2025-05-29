@@ -1,11 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:yumquick/shared/theme/app_colors.dart';
+import 'package:yumquick/shared/widgets/profile_sidebar.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
+    openProfileSideBar() {
+      showGeneralDialog(
+        context: context,
+        barrierDismissible: true,
+        barrierLabel: "Profile",
+        transitionDuration: const Duration(milliseconds: 350),
+        pageBuilder:
+            (context, animation, secondaryAnimation) => ProfileSidebar(),
+        transitionBuilder: (context, animation, secondaryAnimation, child) {
+          final offsetAnimation = Tween<Offset>(
+            begin: const Offset(1, 0), // Start off-screen right
+            end: Offset.zero,
+          ).animate(
+            CurvedAnimation(parent: animation, curve: Curves.easeOutCubic),
+          );
+          return SlideTransition(position: offsetAnimation, child: child);
+        },
+      );
+    }
+
     return SliverAppBar(
       backgroundColor: AppColors.yellowBase,
       expandedHeight: MediaQuery.of(context).size.height * 0.2,
@@ -33,7 +54,10 @@ class HomeHeader extends StatelessWidget {
                       const SizedBox(width: 8),
                       _iconButton('assets/images/icons/bell-icon.png'),
                       const SizedBox(width: 8),
-                      _iconButton('assets/images/icons/user-icon.png'),
+                      _iconButton(
+                        'assets/images/icons/user-icon.png',
+                        onTap: openProfileSideBar,
+                      ),
                     ],
                   ),
                 ],
