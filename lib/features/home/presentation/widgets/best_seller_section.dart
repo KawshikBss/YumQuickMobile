@@ -7,56 +7,61 @@ class BestSellerSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.end,
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 36),
+        child: Column(
           children: [
-            Text(
-              'Best Seller',
-              style: TextStyle(
-                fontFamily: 'LeagueSpartan',
-                color: AppColors.textDark,
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  'Best Seller',
+                  style: TextStyle(
+                    fontFamily: 'LeagueSpartan',
+                    color: AppColors.textDark,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Row(
+                    children: [
+                      Text(
+                        'View All',
+                        style: TextStyle(
+                          fontFamily: 'LeagueSpartan',
+                          color: AppColors.orangeBase,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Icon(
+                        Icons.chevron_right,
+                        color: AppColors.orangeBase,
+                        size: 14,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-            GestureDetector(
-              onTap: () {},
+            const SizedBox(height: 14),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
               child: Row(
-                children: [
-                  Text(
-                    'View All',
-                    style: TextStyle(
-                      fontFamily: 'LeagueSpartan',
-                      color: AppColors.orangeBase,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Icon(
-                    Icons.chevron_right,
-                    color: AppColors.orangeBase,
-                    size: 14,
-                  ),
-                ],
+                children:
+                    FoodItem.items
+                        .map((foodItem) => _bestSellerItem(foodItem))
+                        .toList(),
               ),
             ),
           ],
         ),
-        const SizedBox(height: 14),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children:
-                FoodItem.items
-                    .map((foodItem) => _bestSellerItem(foodItem))
-                    .toList(),
-          ),
-        ),
-      ],
+      ),
     );
   }
 
