@@ -92,6 +92,11 @@ flutter:
     - assets/images/icons/sidebar/contact.png
     - assets/images/icons/sidebar/faq.png
     - assets/images/icons/sidebar/setting.png
+    - assets/images/icons/sidebar/cookware.png
+    - assets/images/icons/sidebar/heart.png
+    - assets/images/icons/sidebar/delivery.png
+    - assets/images/icons/sidebar/notification-icon.png
+    - assets/images/icons/sidebar/cart-icon.png
     - assets/images/icons/sidebar/logout.png
     # - assets/fonts/LeagueSpartan.ttf
   #   - images/a_dot_ham.jpeg
