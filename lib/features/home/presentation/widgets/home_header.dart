@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yumquick/shared/theme/app_colors.dart';
+import 'package:yumquick/shared/widgets/cart_menu_sidebar.dart';
+import 'package:yumquick/shared/widgets/notification_sidebar.dart';
 import 'package:yumquick/shared/widgets/profile_sidebar.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -7,14 +9,13 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    openProfileSideBar() {
+    openSideBar(page, String label) {
       showGeneralDialog(
         context: context,
         barrierDismissible: true,
-        barrierLabel: "Profile",
+        barrierLabel: label,
         transitionDuration: const Duration(milliseconds: 350),
-        pageBuilder:
-            (context, animation, secondaryAnimation) => ProfileSidebar(),
+        pageBuilder: (context, animation, secondaryAnimation) => page,
         transitionBuilder: (context, animation, secondaryAnimation, child) {
           final offsetAnimation = Tween<Offset>(
             begin: const Offset(1, 0),
@@ -25,6 +26,18 @@ class HomeHeader extends StatelessWidget {
           return SlideTransition(position: offsetAnimation, child: child);
         },
       );
+    }
+
+    openProfileSideBar() {
+      openSideBar(ProfileSidebar(), 'Profile');
+    }
+
+    openNotificationSidebar() {
+      openSideBar(NotificationSidebar(), 'Notification');
+    }
+
+    openCartMenuSidebar() {
+      openSideBar(CartMenuSidebar(), 'CartMenu');
     }
 
     return SliverAppBar(
@@ -50,9 +63,15 @@ class HomeHeader extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      _iconButton('assets/images/icons/cart-icon.png'),
+                      _iconButton(
+                        'assets/images/icons/cart-icon.png',
+                        onTap: openCartMenuSidebar,
+                      ),
                       const SizedBox(width: 8),
-                      _iconButton('assets/images/icons/bell-icon.png'),
+                      _iconButton(
+                        'assets/images/icons/bell-icon.png',
+                        onTap: openNotificationSidebar,
+                      ),
                       const SizedBox(width: 8),
                       _iconButton(
                         'assets/images/icons/user-icon.png',
